@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Integrated IoT Smart Fan System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }body {
+  background: linear-gradient(to bottom, #020617, #0f172a, #1e293b);
+  color: white;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  font-size: 42px;
+  color: #22d3ee;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 20px;
+  color: #cbd5e1;
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #111827;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.card h2, .card h3 {
+  color: #22d3ee;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.mode-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #22d3ee;
+}
+
+.temp-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.temp-box {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid #334155;
+  margin-top: 40px;
+  color: #94a3b8;
+}
+
+  </style>
+</head>
+<body><header>
+  <h1>AI INTEGRATED IOT BASED SMART FAN SYSTEM</h1>
+  <p>
+    FOR ADAPTIVE CONTROL AND SAFETY MONITORING
+    <br><br>
+    An intelligent IoT-based smart fan system designed for automatic temperature control,
+    motion detection, energy efficiency, and smart safety monitoring.
+  </p>
+</header><section>
+  <div class="card-container">
+    <div class="card">
+      <h2>Project Overview</h2>
+      <p>
+        The Smart Fan System is an AI integrated IoT project that automatically controls fan operation based on environmental conditions and user requirements.
+      </p>
+    </div><div class="card">
+  <h2>Key Features</h2>
+  <ul>
+    <li>Four intelligent operating modes</li>
+    <li>Temperature based fan speed control</li>
+    <li>Motion detection using ESP32-CAM</li>
+    <li>Servo radar scanning system</li>
+    <li>Blynk IoT application control</li>
+    <li>Telegram alert system</li>
+  </ul>
+</div>
+
+  </div>
+</section><section>
+  <h2 class="mode-title">Working Modes</h2>  <div class="card-container">
+    <div class="card">
+      <h3>1. Manual Mode</h3>
+      <p>
+        Default operating mode. Relay1 controls the fan and Relay5 controls rotation.
+        The fan runs continuously until the user changes the mode.
+      </p>
+    </div><div class="card">
+  <h3>2. Semi Auto Mode</h3>
+  <p>
+    The user manually selects the fan speed through the Blynk application.
+    Relay2 controls low speed, Relay3 medium speed, and Relay4 high speed.
+  </p>
+</div>
+
+<div class="card">
+  <h3>3. Auto Mode</h3>
+  <p>
+    Uses DHT22 sensor, ultrasonic sensor, ESP32-CAM motion detection, and servo scanning.
+    Fan speed changes automatically according to room temperature.
+  </p>
+</div>
+
+<div class="card">
+  <h3>4. Spy Mode</h3>
+  <p>
+    All relays and OLED display turn OFF while motion detection remains active.
+    A Telegram alert is sent when motion is detected.
+  </p>
+</div>
+
+  </div>
+</section><section>
+  <div class="card">
+    <h2 class="mode-title">Temperature Based Control</h2><div class="temp-boxes">
+  <div class="temp-box">
+    <h3>Below 28°C</h3>
+    <p>Low Speed</p>
+  </div>
+
+  <div class="temp-box">
+    <h3>28°C to 35°C</h3>
+    <p>Medium Speed</p>
+  </div>
+
+  <div class="temp-box">
+    <h3>Above 35°C</h3>
+    <p>High Speed</p>
+  </div>
+</div>
+
+  </div>
+</section><section>
+  <div class="card-container">
+    <div class="card">
+      <h2>Components Used</h2>
+      <ul>
+        <li>ESP32 Microcontroller</li>
+        <li>ESP32-CAM Module</li>
+        <li>DHT22 Temperature Sensor</li>
+        <li>Ultrasonic Sensor</li>
+        <li>Servo Motor</li>
+        <li>Relay Modules</li>
+        <li>OLED Display</li>
+      </ul>
+    </div><div class="card">
+  <h2>User Instructions</h2>
+  <ul>
+    <li>Ensure the socket is adaptable for the fan.</li>
+    <li>Maintain stable network and power supply.</li>
+    <li>Do not share Wi‑Fi credentials.</li>
+    <li>Do not share Blynk login details.</li>
+    <li>System starts in Manual Mode.</li>
+    <li>Turn OFF switches before changing modes.</li>
+    <li>Ensure rotation is OFF before changing modes.</li>
+  </ul>
+</div>
+
+  </div>
+</section><footer>
+  <h2>AI Integrated IoT Smart Fan System</h2>
+  <p>Adaptive Control • Energy Efficiency • Safety Monitoring</p>
+</footer></body>
+</html>
